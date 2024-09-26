@@ -14,7 +14,11 @@ def show_suggestion(user_data,external_data):
         [
             (
                 "system",
-                "You are a helpful assistant that suggest a motivational 'transport of the day' quote  (not use double quotations for the quote and use emojis) which suggest how to save CO2 on user's way to work, respecting his usual transportation habits {user_data} and factoring in his environment {external_data}. Consider that when using bikes the user credits increase.",
+                "You are a helpful assistant that suggest a motivational 'transport of the day' quote  (not use double quotations for the quote and use emojis) which suggest how to save CO2 on user's way to work.",
+            ),
+            (
+                "human",
+                "Generate a motivational 'transport of the day' quote respecting the user's usual transportation habits {user_data} and factoring in his environment {external_data}. Consider that when using bikes the user credits increase."
             )
         ]
     )

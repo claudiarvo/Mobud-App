@@ -9,9 +9,9 @@ def init_data():
         "max_credit": 100.0,  # Max budget available
         "co2_produced": 20.3,  # Total CO2 emitted in kg
         "commute_history": [
-            {"Date": "2024-09-20", "Transport": "Car", "Co2 Emission": 5.2, "Credit Used": 10},
-            {"Date": "2024-09-21", "Transport": "Bike", "Co2 Emission": 0.0, "Credit Used": 0},
-            {"Date": "2024-09-22", "Transport": "Public Transport", "Co2 Emission": 1.5, "Credit Used": 5},
+            {"Date": "2024-09-20", "Transport": "Car", "Co2 Emission": 5.2},
+            {"Date": "2024-09-21", "Transport": "Bike", "Co2 Emission": 0.0},
+            {"Date": "2024-09-22", "Transport": "Public Transport", "Co2 Emission": 1.5},
         ],
     }
 
@@ -47,8 +47,7 @@ def update_data(user_data, transport_data, mode):
     user_data["commute_history"].append({
         "Date": datetime.now().strftime("%Y-%m-%d"),
         "Transport": mode,
-        "Co2 Emission": co2_emission,
-        "Credit Used": credit_used
+        "Co2 Emission": co2_emission
     })
 
     return user_data
